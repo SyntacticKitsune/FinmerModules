@@ -1,0 +1,60 @@
+{
+	"!Type": "AssetScene",
+	"AssetID": "a79a8f4a-449a-4c15-8565-64c17987a32a",
+	"AssetName": "ExperimentalSettings",
+	"IsGameStart": false,
+	"IsPatch": true,
+	"InjectMode": "BeforeTarget",
+	"InjectTargetScene": "ab250357-19c3-4e27-9c8f-505e01f329af",
+	"InjectTargetNode": "Start",
+	"Root": {
+		"NodeType": "Root",
+		"Key": "Root",
+		"Children": [
+			{
+				"NodeType": "State",
+				"Key": "ExperimentalSettings",
+				"ScriptAction": {
+					"!Type": "ScriptDataInline",
+					"Script": "SetInventoryEnabled(false)\r\nLogRaw('This module uses experimental settings that could stop working at any time. We cannot guarantee it will load or work. Here be dragons!')"
+				},
+				"Children": [
+					{
+						"NodeType": "Choice",
+						"Title": "Create Backup and Load",
+						"Tooltip": "",
+						"Highlight": false,
+						"ButtonWidth": 1.0,
+						"ScriptAction": {
+							"!Type": "ScriptDataInline",
+							"Script": "LogRaw('Backed up: Core.furball\\nsize: 1.1 MB')\r\nLogSplit()"
+						},
+						"Children": [
+							{
+								"NodeType": "Link",
+								"LinkTarget": "Start"
+							}
+						]
+					},
+					{
+						"NodeType": "Choice",
+						"Title": "I know what I'm doing!",
+						"Tooltip": "",
+						"Highlight": false,
+						"ButtonWidth": 1.0,
+						"ScriptAction": {
+							"!Type": "ScriptDataInline",
+							"Script": "LogSplit()"
+						},
+						"Children": [
+							{
+								"NodeType": "Link",
+								"LinkTarget": "Start"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

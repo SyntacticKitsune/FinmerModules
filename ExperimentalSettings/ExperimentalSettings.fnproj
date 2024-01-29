@@ -1,0 +1,14 @@
+{
+	"FormatVersion": 20,
+	"ID": "9cbb8427-c312-4b0c-a120-84c9bf64e691",
+	"Title": "Experimental Settings",
+	"Author": "SyntacticKitsune",
+	"Dependencies": [
+		{
+			"ID": "edcf99d2-6ced-40fa-87e9-86cda5e570ee",
+			"FileNameHint": "Core.furball"
+		}
+	],
+
+	"Version": "1.0.0"
+}
