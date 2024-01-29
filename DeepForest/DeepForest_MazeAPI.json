@@ -1,0 +1,15 @@
+{
+	"!Type": "AssetScript",
+	"AssetID": "77b15178-bb0c-11ee-a26c-7486e223ff34",
+	"AssetName": "DeepForest_MazeAPI",
+	"Contents": {
+		"!Type": "ScriptDataExternal",
+		"Name": "DeepForest_MazeAPI"
+	},
+	"LoadOrder": [
+		{
+			"TargetAsset": "4cf9b0fe-0302-4aeb-891d-2ff2900e87d1",
+			"Relation": "After"
+		}
+	]
+}

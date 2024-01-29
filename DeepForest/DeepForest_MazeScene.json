@@ -1,0 +1,52 @@
+{
+	"!Type": "AssetScene",
+	"AssetID": "82f5a200-bb0c-11ee-8f36-7486e223ff34",
+	"AssetName": "DeepForest_MazeScene",
+	"ScriptCustom": {
+		"!Type": "ScriptDataExternal",
+		"Name": "DeepForest_MazeScene"
+	},
+	"IsGameStart": false,
+	"IsPatch": false,
+	"Root": {
+		"NodeType": "Root",
+		"Key": "Root",
+		"Children": [
+			{
+				"__Comment": "If this state isn't here then Finmer gets confused and dies.",
+				"NodeType": "State",
+				"Key": "FunnyDubiouslyRedundantStateNode",
+				"ScriptAction": {
+					"__Comment": "Bonus: ScriptEnter is too early for adding exits.",
+					"!Type": "ScriptDataInline",
+					"Script": "refreshDisplay(true)"
+				},
+				"Children": [
+					{
+						"NodeType": "Choice",
+						"Key": "UseRingC",
+						"Title": "Use Ring",
+						"Tooltip": "Activate Rux's Navigator to show the path.",
+						"Highlight": true,
+						"ButtonWidth": 1.0,
+						"ScriptAppear": {
+							"!Type": "ScriptDataInline",
+							"Script": "return Storage.GetFlag('MQ03_DONE') and not Storage.GetFlag('DEEPFOREST_RING_USED')"
+						},
+						"Children": [
+							{
+								"NodeType": "State",
+								"Key": "UseRing",
+								"ScriptAction": {
+									"!Type": "ScriptDataInline",
+									"Script": "Storage.SetFlag('DEEPFOREST_RING_USED', true)\r\nLog('MQ04_ADEPT_INTRO01')\r\nrefreshDisplay(false)"
+								},
+								"Children": []
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

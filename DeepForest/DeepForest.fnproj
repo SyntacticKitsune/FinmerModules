@@ -1,0 +1,15 @@
+{
+	"FormatVersion": 20,
+	"ID": "e0ba8127-53dd-4c97-8f7f-0b079edeaae5",
+	"Title": "Deep Forest",
+	"Author": "SyntacticKitsune",
+	"Dependencies": [
+		{
+			"ID": "edcf99d2-6ced-40fa-87e9-86cda5e570ee",
+			"FileNameHint": "Core.furball"
+		}
+	],
+	"__Comment": "These fields technically don't really exist, but I shall put them here for completeness.",
+	"Credits": "Deep Forest includes three libraries: json.lua (by rxi), LuaMaze (by shironecko/Vitaliy Sich), and lua-star (by Wesley Werner), all used under the MIT License. More information can be found at Deep Forest's source: https://github.com/SyntacticKitsune/FinmerModules/tree/main/DeepForest.",
+	"Version": "1.0.0"
+}

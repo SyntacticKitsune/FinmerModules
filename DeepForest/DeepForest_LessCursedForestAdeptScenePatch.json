@@ -1,0 +1,25 @@
+{
+	"!Type": "AssetScene",
+	"AssetID": "6650fcab-b370-4434-a9f7-49651888621a",
+	"AssetName": "DeepForest_LessCursedForestAdeptScenePatch",
+	"IsGameStart": false,
+	"IsPatch": true,
+	"InjectMode": "AfterTarget",
+	"InjectTargetScene": "12bf6348-0e15-43a4-88af-4eb8f435cb69",
+	"InjectTargetNode": "Compass_Exit",
+	"__Comment": "This patch is to make sure exiting doesn't put you in old forest scene, because then you'd have to see my dumb forest scene failsafe patch (a rather unfortunate outcome for everyone involved).",
+	"Root": {
+		"NodeType": "Root",
+		"Key": "Root",
+		"__Comment": "Fingers crossed this'll *actually* override the exit. We shall see, won't we?",
+		"Children": [
+			{
+				"NodeType": "Compass",
+				"Key": "Compass_Exit",
+				"CompassLinkDirection": "South",
+				"CompassLinkScene": "d16bc6e5-acc7-4bba-81ab-130555fe0c70",
+				"__Comment": "As much as I'd like to subject everyone to walking all the way back -- yeah, no: I'll just teleport ya'll back. (Ah yes, I will personally appear at the exit of this scene in order to magic people back to the cottage segment. That would be the most underwhelming self-insert imaginable.)"
+			}
+		]
+	}
+}

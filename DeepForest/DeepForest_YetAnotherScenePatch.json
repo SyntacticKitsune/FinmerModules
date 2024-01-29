@@ -1,0 +1,30 @@
+{
+	"!Type": "AssetScene",
+	"AssetID": "c5e7602e-4ce8-4e18-9767-0d623142db5b",
+	"AssetName": "DeepForest_YetAnotherScenePatch",
+	"IsGameStart": false,
+	"IsPatch": true,
+	"InjectMode": "BeforeTarget",
+	"InjectTargetScene": "8bd05185-f23d-43ac-bb88-300df2b54acc",
+	"InjectTargetNode": "SQ02_R_SneakAway",
+	"__Comment": "This patch is to make sure sneaking away from Chip doesn't put you in the old forest scene.",
+	"Root": {
+		"NodeType": "Root",
+		"Key": "Root",
+		"Children": [
+			{
+				"NodeType": "State",
+				"ScriptAction": {
+					"!Type": "ScriptDataVisualAction",
+					"Nodes": [
+						{
+							"!Type": "CommandSetScene",
+							"SceneGuid": "82f5a200-bb0c-11ee-8f36-7486e223ff34"
+						}
+					]
+				},
+				"Children": []
+			}
+		]
+	}
+}

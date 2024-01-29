@@ -1,0 +1,10 @@
+{
+	"!Type": "AssetScript",
+	"AssetID": "ea002ada-5187-4bba-ac11-68c5cf654927",
+	"AssetName": "DeepForest_Json",
+	"Contents": {
+		"!Type": "ScriptDataExternal",
+		"Name": "DeepForest_Json"
+	},
+	"LoadOrder": []
+}

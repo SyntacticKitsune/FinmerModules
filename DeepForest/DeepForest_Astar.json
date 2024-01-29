@@ -1,0 +1,10 @@
+{
+	"!Type": "AssetScript",
+	"AssetID": "326db388-5660-4fb9-b552-3c8b4d69f5ce",
+	"AssetName": "DeepForest_Astar",
+	"Contents": {
+		"!Type": "ScriptDataExternal",
+		"Name": "DeepForest_Astar"
+	},
+	"LoadOrder": []
+}

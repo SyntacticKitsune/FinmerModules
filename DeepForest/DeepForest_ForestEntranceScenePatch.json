@@ -1,0 +1,60 @@
+{
+	"!Type": "AssetScene",
+	"AssetID": "89a811c5-f802-4c7d-a6aa-9162be4e5b21",
+	"AssetName": "DeepForest_ForestEntranceScenePatch",
+	"IsGameStart": false,
+	"IsPatch": true,
+	"InjectMode": "InsideAtEnd",
+	"InjectTargetScene": "d16bc6e5-acc7-4bba-81ab-130555fe0c70",
+	"InjectTargetNode": "ExteriorMain",
+	"Root": {
+		"NodeType": "Root",
+		"Key": "Root",
+		"Children": [
+			{
+				"NodeType": "Choice",
+				"Title": "Rux's Cabin",
+				"Tooltip": "You know the path to the Adept's cabin now.",
+				"Highlight": false,
+				"ButtonWidth": 1.0,
+				"ScriptAppear": {
+					"!Type": "ScriptDataVisualCondition",
+					"Mode": "All",
+					"Operand": true,
+					"Tests": [
+						{
+							"!Type": "ConditionVarFlag",
+							"VariableName": "FOREST_ADEPT_FIRST",
+							"OperandMode": "Literal",
+							"OperandLiteral": true
+						}
+					]
+				},
+				"Children": [
+					{
+						"NodeType": "State",
+						"ScriptAction": {
+							"!Type": "ScriptDataVisualAction",
+							"Nodes": [
+								{
+									"!Type": "CommandSetScene",
+									"SceneGuid": "12bf6348-0e15-43a4-88af-4eb8f435cb69"
+								}
+							]
+						},
+						"Children": []
+					}
+				]
+			},
+			{
+				"NodeType": "Compass",
+				"CompassLinkDirection": "East",
+				"CompassLinkScene": "00000000-0000-0000-0000-000000000000",
+				"ScriptAction": {
+					"!Type": "ScriptDataExternal",
+					"Name": "DeepForest_MazeGenerator"
+				}
+			}
+		]
+	}
+}

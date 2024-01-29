@@ -1,0 +1,10 @@
+{
+	"!Type": "AssetScript",
+	"AssetID": "36907ff6-bb49-11ee-85d9-7486e223ff34",
+	"AssetName": "DeepForest_Maze",
+	"Contents": {
+		"!Type": "ScriptDataExternal",
+		"Name": "DeepForest_Maze"
+	},
+	"LoadOrder": []
+}

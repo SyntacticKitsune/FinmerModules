@@ -1,0 +1,43 @@
+{
+	"!Type": "AssetScene",
+	"AssetID": "5323e8bf-d9f2-4c77-bc50-e9514390a742",
+	"AssetName": "DeepForest_SanityPatch",
+	"IsGameStart": false,
+	"IsPatch": true,
+	"InjectMode": "BeforeTarget",
+	"InjectTargetScene": "d93a8b96-ed74-4de1-9f57-5f404f9ea351",
+	"InjectTargetNode": "Entrypoint",
+	"__Comment": "In case anyone ends up in Scene_Forest, this'll fix their location.",
+	"Root": {
+		"NodeType": "Root",
+		"Key": "Root",
+		"Children": [
+			{
+				"NodeType": "State",
+				"ScriptAction": {
+					"!Type": "ScriptDataInline",
+					"Script": "LogRaw('It is pitch dark. You are likely to be eaten by a grue.')"
+				},
+				"Children": [
+					{
+						"NodeType": "Choice",
+						"Title": "Run!",
+						"Tooltip": "",
+						"Highlight": false,
+						"ButtonWidth": 1.0,
+						"Children": [
+							{
+								"NodeType": "State",
+								"ScriptAction": {
+									"!Type": "ScriptDataInline",
+									"Script": "LogRaw('Thankfully, you manage to return to safety.')\r\nSetScene('Scene_ForestCottage')"
+								},
+								"Children": []
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

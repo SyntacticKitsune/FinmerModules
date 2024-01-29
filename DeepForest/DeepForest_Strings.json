@@ -1,0 +1,86 @@
+{
+	"!Type": "AssetStringTable",
+	"AssetID": "8b1cb75e-0522-49a2-804d-15fd1c1dca25",
+	"AssetName": "DeepForest_Strings",
+	"Entries": [
+		{
+			"Key": "DEEPFOREST_HEADING",
+			"Text": [
+				"You are deep inside the forest at an unknown location.",
+				"You are somewhere deep inside the forest.",
+				"You are deep inside the forest, your exact whereabouts unknown.",
+				"You are deep inside the forest, although you're unsure of exactly where.",
+				"You are deep inside the forest, although the dense, repetitive foliage makes it hard to work out where."
+			]
+		},
+		{
+			"Key": "DEEPFOREST_CONTENT_DAY",
+			"Text": [
+				"The occasional sunlight trickling down the forest canopy helps to illuminate your surroundings.",
+				"The forest landscape could be considered serene -- if you weren't currently lost in it.",
+				"You can hear birds chirping, although you cannot deduce where the sound is coming from."
+			]
+		},
+		{
+			"Key": "DEEPFOREST_CONTENT_NIGHT",
+			"Text": [
+				"The occasional moonlight trickling down the forest canopy helps to illuminate your surroundings.",
+				"The forest landscape could be considered serene -- if you weren't currently lost in it.",
+				"You can hear the orchestra of a forest at night, which at least gives you something to listen to while attempting to find your way."
+			]
+		},
+		{
+			"__Comment": "The difference between the normal lines and the ring ones is that the ring ones don't mention you being lost -- you have a guide, after all.",
+			"Key": "DEEPFOREST_CONTENT_DAY_RING",
+			"Text": [
+				"The occasional sunlight trickling down the forest canopy helps to illuminate your surroundings.",
+				"The serene forest landscape surrounds you.",
+				"You can hear birds chirping, although you cannot deduce where the sound is coming from."
+			]
+		},
+		{
+			"__Comment": "One of these days I'm going to typo this 'DEEPFROST', I can feel it.",
+			"Key": "DEEPFOREST_CONTENT_NIGHT_RING",
+			"Text": [
+				"The occasional moonlight trickling down the forest canopy helps to illuminate your surroundings.",
+				"The serene forest landscape surrounds you.",
+				"You can hear the orchestra of a forest at night."
+			]
+		},
+		{
+			"Key": "DEEPFOREST_ALL_DIRECTIONS",
+			"Text": [
+				"The forest is sparse enough here that you can {?|go|move} in any direction.",
+				"The forest opens up a little here, allowing you to {?|go|move} in any direction.",
+				"You're currently in a small clearing, with all directions available to you."
+			]
+		},
+		{
+			"Key": "DEEPFOREST_DIRECTIONS",
+			"Text": [
+				"You can try going {!directions or}.",
+				"{!directions and caps} look like suitable directions to move in.",
+				"It {?|looks like|appears} you can go {!directions or}."
+			]
+		},
+		{
+			"Key": "DEEPFOREST_SINGLE_DIRECTION",
+			"Text": [
+				"You've reached a dead-end, with {!direction} being the only available direction.",
+				"The forest becomes much denser here -- {!direction} is the only way you can {?|go|move}.",
+				"You can only {?|go|move} {!direction}.",
+				"{!direction caps} is the only direction available to you.",
+				"It {?|looks like|appears that} you can only {?|go|move} {!direction}."
+			]
+		},
+		{
+			"__Comment": "If I have to type DEEPFOREST one more time I swear I'm gonna turn Finmer into a CTM map where you're gonna have to navigate through the 'DEEPFROST STRONGHOLD' to assemble the lost multicolor amber monolith. I'm sure Rux would be somewhat concerned.",
+			"Key": "DEEPFOREST_RING_HINT",
+			"Text": [
+				"You can feel a beckoning towards the {!direction}.",
+				"The ring tries to guide you {!direction}.",
+				"Your mind is drawn towards the {!direction}."
+			]
+		}
+	]
+}

@@ -1,0 +1,88 @@
+{
+	"!Type": "AssetScene",
+	"AssetID": "3dda7337-0f4b-40db-b01a-5a1660316b11",
+	"AssetName": "DeepForest_CursedForestAdeptScenePatch",
+	"IsGameStart": false,
+	"IsPatch": true,
+	"InjectMode": "BeforeTarget",
+	"InjectTargetScene": "12bf6348-0e15-43a4-88af-4eb8f435cb69",
+	"InjectTargetNode": "Entry_R_First",
+	"__Comment": "Alright so the purpose of this patch is to remove the printing of MQ04_ADEPT_INTRO01. Honestly I'd kill for the ability to patch the actions of scene nodes.",
+	"Root": {
+		"NodeType": "Root",
+		"Key": "Root",
+		"Children": [
+			{
+				"NodeType": "State",
+				"Key": "DEEPFOREST_Entry_R_First",
+				"ScriptAction": {
+					"!Type": "ScriptDataVisualAction",
+					"Nodes": [
+						{
+							"!Type": "CommandComment",
+							"Comment": "Make SQ02 unavailable"
+						},
+						{
+							"!Type": "CommandJournalClose",
+							"JournalGuid": "9011a5fb-a8dc-4efb-bd89-8458490a64f8"
+						},
+						{
+							"!Type": "CommandVarSetNumber",
+							"VariableName": "SQ02",
+							"ValueOperation": "Set",
+							"OperandMode": "Literal",
+							"OperandLiteral": 999.0
+						},
+						{
+							"!Type": "CommandComment",
+							"Comment": "Area entry text"
+						},
+						{
+							"!Type": "CommandVarSetFlag",
+							"VariableName": "FOREST_ADEPT_FIRST",
+							"OperandMode": "Literal",
+							"OperandLiteral": true
+						},
+						{
+							"!Type": "CommandVarSetNumber",
+							"VariableName": "MQ04",
+							"ValueOperation": "Set",
+							"OperandMode": "Literal",
+							"OperandLiteral": 1.0
+						},
+						{
+							"!Type": "CommandComment",
+							"Comment": "Log('MQ04_ADEPT_INTRO01')"
+						},
+						{
+							"!Type": "CommandPlayerAddXP",
+							"OperandMode": "Script",
+							"OperandText": "RewardXP.DiscoveryMajor"
+						}
+					]
+				},
+				"ScriptAppear": {
+					"!Type": "ScriptDataInline",
+					"Script": "return not Storage.GetFlag(\"FOREST_ADEPT_FIRST\")"
+				},
+				"Children": [
+					{
+						"NodeType": "Choice",
+						"Key": "DEEPFOREST_Entry_C_Intro02",
+						"Title": "Continue",
+						"Tooltip": "The trees themselves beckon you - or is that a trick of the light?",
+						"Highlight": false,
+						"ButtonWidth": 1.0,
+						"Children": [
+							{
+								"NodeType": "Link",
+								"Key": "DEEPFOREST_Entry_R_Intro02_Link",
+								"LinkTarget": "Entry_R_Intro02"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
